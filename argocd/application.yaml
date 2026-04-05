@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: default
+  name: gitops
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/RildoDias08/tf-eks-gitops-karpenter
+    repoURL: https://github.com/RildoDias08/GitOps.git
     targetRevision: HEAD
     path: .
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: gitops
   syncPolicy:
     automated:
       selfHeal: true
