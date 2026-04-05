@@ -14,4 +14,4 @@ images:
   newTag: 8519cc7f492fc3fcff953b0ea40263d544584ce8
 - name: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/frontend
   newName: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/frontend
-  newTag: 420236cd204207aa48127c4aaff16faa927a7f19
+  newTag: 8519cc7f492fc3fcff953b0ea40263d544584ce8
