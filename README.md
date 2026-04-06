@@ -41,10 +41,13 @@ flowchart TD
 .
 ├── argocd/
 │   └── application.yaml   # Definição da aplicação no Argo CD
-├── k8s/
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   └── kustomization.yaml
+├── backend/
+│   ├── deploy.yml
+│   ├── service.yml
+├── frontend/
+│   ├── deploy.yml
+│   ├── service.yml
+│── kustomization.yaml
 ```
 
 ---
@@ -60,7 +63,7 @@ spec:
   source:
     repoURL: https://github.com/RildoDias08/GitOps.git
     targetRevision: HEAD
-    path: k8s
+    path: .
 ```
 
 ---
