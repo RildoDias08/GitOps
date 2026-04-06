@@ -1,4 +1,4 @@
-# 🚀 GitOps Repository - Argo CD Deployment
+# 🚀 GitOps - ArgoCD
 
 Este repositório mostra o deploy da aplicação no cluster Kubernetes utilizando a abordagem GitOps.
 
