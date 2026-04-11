@@ -19,3 +19,10 @@ spec:
         image: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/backend
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "300m"
+            memory: "256Mi"
