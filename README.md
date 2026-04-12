@@ -14,10 +14,22 @@ flowchart TD
     B --> C["GitOps Repo (kustomization.yaml atualizado)"]
     C --> D["Argo CD"]
     D --> E["EKS Cluster"]
-    E --> F["Aplicações (Frontend/Backend)"]
-    E --> H["AWS Load Balancer Controller (ALB)"]
-    H --> I["Ingress ALB"]
-    D --> G["Observabilidade (kube-prometheus-stack)"]
+
+    subgraph EKS["EKS Cluster (Kubernetes)"]
+        F["Aplicações (Frontend/Backend)"]
+        G["Observabilidade (kube-prometheus-stack)"]
+        H["AWS Load Balancer Controller"]
+        I["Ingress (recurso Kubernetes)"]
+    end
+
+    E --> F
+    E --> G
+    E --> H
+    E --> I
+    I -- observado/reconciliado por --> H
+
+    J["AWS (Application Load Balancer - ALB)"]
+    H -- cria/configura --> J
 ```
 
 ---
