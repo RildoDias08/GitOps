@@ -14,19 +14,19 @@ spec:
   rules:
     - host: teste.rio-aws.com.br
       http:
-       paths:
-         - path: /api
-           pathType: Prefix
-           backend:
-             service:
-               name: backend
-               port:
-                 number: 80
-         - path: /
-           pathType: Prefix
-           backend:
-             service:
-               name: frontend
-               port:
-                 number: 80
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
                  
