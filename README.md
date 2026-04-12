@@ -212,7 +212,6 @@ Arquivo: `kustomization.yaml`
 ## 🚀 Próximos passos
 
 - [ ] Configurar ambientes separados (`dev`/`prod`)
-- [ ] Adicionar TLS/ACM no Ingress ALB
 - [ ] Incluir dashboards e alertas customizados no Prometheus/Grafana
 - [ ] Evoluir para padrão App of Apps
 
