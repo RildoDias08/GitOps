@@ -12,7 +12,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: "https://teste.rio-aws.com.br"
+    - host: teste.rio-aws.com.br
       http:
        paths:
          - path: /api
