@@ -202,7 +202,6 @@ Arquivo: `kustomization.yaml`
 
 ## 📌 Observações
 
-- O cluster não é atualizado manualmente para recursos gerenciados pelo Argo CD.
 - Toda mudança deve ser feita via Git.
 - O Argo CD garante consistência entre o estado no Git e no cluster.
 - O `ServiceAccount` do ALB Controller deve existir com a anotação IRSA correta antes do controller operar com as permissões esperadas.
