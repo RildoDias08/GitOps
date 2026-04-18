@@ -187,16 +187,6 @@ images:
 
 Arquivo: `kustomization.yaml`
 
----
-
-## 🧩 Conceitos aplicados
-
-- GitOps (Git como fonte da verdade)
-- Continuous Deployment com Argo CD
-- Kustomize para gerenciamento de manifests
-- Helm Chart via Argo CD (ALB Controller e observabilidade)
-- Ingress via AWS Load Balancer Controller
-- Monitoramento com `kube-prometheus-stack`
 
 ---
 
@@ -225,6 +215,7 @@ Este repositório faz parte de uma arquitetura cloud com:
 - GitHub Actions (CI)
 - ECR (container registry)
 - Argo CD (CD via GitOps)
+- Ingress via AWS Load Balancer Controller
 - Prometheus + Grafana (observabilidade)
 
 ---
