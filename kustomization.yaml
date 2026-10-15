@@ -11,7 +11,7 @@ resources:
 images:
 - name: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/backend
   newName: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/backend
-  newTag: e0293cfa159fdabc2a2811fefdbfbdc12825c006
+  newTag: e9b447e5ae43de56cd3d9d95008c257abfb137e0
 - name: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/frontend
   newName: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/frontend
   newTag: e0293cfa159fdabc2a2811fefdbfbdc12825c006
