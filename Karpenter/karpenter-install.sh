@@ -32,5 +32,5 @@ function installKarpenter() {
 }
 
 #helmtemplate
-installCRDs
-#installKarpenter
+#installCRDs
+installKarpenter
