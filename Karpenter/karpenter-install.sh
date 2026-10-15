@@ -1,4 +1,4 @@
-KARPENTER_VERSION="1.12.1"
+KARPENTER_VERSION="1.15.0"
 CLUSTER_NAME="TEGK-eks-cluster"
 KARPENTER_NAMESPACE="kube-system"
 AWS_PARTITION="aws"
@@ -16,4 +16,21 @@ function helmtemplate() {
         --set controller.resources.limits.memory=1Gi > karpenter.yaml
     
 }
-helmtemplate
+
+function installCRDs(){
+    kubectl create -f \
+    "https://raw.githubusercontent.com/aws/karpenter-provider-aws/v${KARPENTER_VERSION}/pkg/apis/crds/karpenter.sh_nodepools.yaml"
+kubectl create -f \
+    "https://raw.githubusercontent.com/aws/karpenter-provider-aws/v${KARPENTER_VERSION}/pkg/apis/crds/karpenter.k8s.aws_ec2nodeclasses.yaml"
+kubectl create -f \
+    "https://raw.githubusercontent.com/aws/karpenter-provider-aws/v${KARPENTER_VERSION}/pkg/apis/crds/karpenter.sh_nodeclaims.yaml"
+
+}
+
+function installKarpenter() {
+    kubectl apply -f karpenter.yaml
+}
+
+#helmtemplate
+installCRDs
+#installKarpenter

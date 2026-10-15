@@ -418,6 +418,10 @@ spec:
             - matchExpressions:
               - key: karpenter.sh/nodepool
                 operator: DoesNotExist
+              - key: eks.amazonaws.com/nodegroup
+                operator: In
+                values:
+                - TEGK-eks-node-group
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
