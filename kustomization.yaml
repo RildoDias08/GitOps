@@ -2,25 +2,25 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - alb-controller/service-account.yaml
-  - argocd/alb-controller.yaml
-  - argocd/application.yaml
-  - Backend/deploy.yml
-  - Backend/service.yml
-  - Frontend/deploy.yml
-  - Frontend/ingress.yaml
-  - Frontend/service.yml
-  - Karpenter/karpenter-node-class.yml
-  - Karpenter/karpenter-node-pool.yml
-  - Karpenter/karpenter.yaml
-  - Karpenter/scale.yml
-  - Observability/kube-prometheus-stack/observability.yaml
+- alb-controller/service-account.yaml
+- argocd/alb-controller.yaml
+- argocd/application.yaml
+- Backend/deploy.yml
+- Backend/service.yml
+- Frontend/deploy.yml
+- Frontend/ingress.yaml
+- Frontend/service.yml
+- Karpenter/karpenter-node-class.yml
+- Karpenter/karpenter-node-pool.yml
+- Karpenter/karpenter.yaml
+- Karpenter/scale.yml
+- Observability/kube-prometheus-stack/observability.yaml
 
 
 images:
 - name: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/backend
   newName: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/backend
-  newTag: a08a4393f280ed8b6fa05bf47ae3526ce31319ef
+  newTag: e3647c0d5de7816bd43a6f13a369714b442356da
 - name: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/frontend
   newName: 749856334984.dkr.ecr.us-east-1.amazonaws.com/app/frontend
   newTag: a08a4393f280ed8b6fa05bf47ae3526ce31319ef
