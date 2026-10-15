@@ -2,10 +2,19 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- Backend/deploy.yml
-- Backend/service.yml
-- Frontend/deploy.yml
-- Frontend/service.yml
+  - alb-controller/service-account.yaml
+  - argocd/alb-controller.yaml
+  - argocd/application.yaml
+  - Backend/deploy.yml
+  - Backend/service.yml
+  - Frontend/deploy.yml
+  - Frontend/ingress.yaml
+  - Frontend/service.yml
+  - Karpenter/karpenter-node-class.yml
+  - Karpenter/karpenter-node-pool.yml
+  - Karpenter/karpenter.yaml
+  - Karpenter/scale.yml
+  - Observability/kube-prometheus-stack/observability.yaml
 
 
 images:
